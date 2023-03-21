@@ -13,6 +13,7 @@ public:
         
     }
     vector<vector<int>> permute(vector<int>& nums) {
+        ios_base::sync_with_stdio(false);
         vector<vector<int>> v ;
         int ind = 0 ;
         hojayega(nums , v , ind) ;
