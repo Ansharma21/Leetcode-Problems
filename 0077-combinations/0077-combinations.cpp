@@ -12,6 +12,7 @@ void combine_krde(int ind,vector<int>output,vector<vector<int>>&v,int n,int k){
         }
     }
     vector<vector<int>> combine(int n, int k) {
+        ios_base::sync_with_stdio(false);
         vector<vector<int>>v ;
         int ind = 1 ;
         vector <int> output ;
