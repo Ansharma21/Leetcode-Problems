@@ -14,8 +14,7 @@ void hojayega_yrr(int ind,vector<int>candidates,int target,vector<vector<int>>&v
         }
         hojayega_yrr(ind+1,candidates,target,v,output);
     }
-    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        ios_base::sync_with_stdio(false);
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target){
         vector <vector<int>> v ;
         int ind = 0 ;
         vector <int> output ;
