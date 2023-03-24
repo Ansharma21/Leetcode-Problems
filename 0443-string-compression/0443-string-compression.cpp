@@ -1,6 +1,7 @@
 class Solution {
 public:
     int compress(vector<char>& chars) {
+        ios_base::sync_with_stdio(false);
         if(chars.size() == 1){
             return 1 ;
         }
