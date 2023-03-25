@@ -9,6 +9,7 @@ public:
         return cnt;
     }
     long long findTheArrayConcVal(vector<int>& nums) {
+        ios_base::sync_with_stdio(false);
         if(nums.size() == 1){
             return nums[0];
         }
