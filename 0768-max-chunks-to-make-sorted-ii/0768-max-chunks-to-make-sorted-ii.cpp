@@ -1,6 +1,7 @@
 class Solution {
 public:
     int maxChunksToSorted(vector<int>& arr) {
+        ios_base::sync_with_stdio(false);
         vector <int> v = arr ;
         sort(v.begin(), v.end());
         long long int c1 = 0 ;
