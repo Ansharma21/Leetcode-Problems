@@ -16,6 +16,7 @@ void hojayega(vector<string> &ans, int n, int open, int close,string output){
         }
     }
     vector<string> generateParenthesis(int n) {
+        ios_base::sync_with_stdio(false);
         vector <string> ans ;
         string output = "" ;
         int open = n ;
