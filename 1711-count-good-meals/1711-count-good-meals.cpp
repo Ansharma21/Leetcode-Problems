@@ -17,15 +17,14 @@ public:
         
         unordered_map<int, int>m ;
         
-        for(auto &i : nums){
-          int c = i ;  
+        for(auto &i : nums){ 
           for(int j = 0 ; j<22 ; j++){
            long long int x = pow(2 , j);
-           if(m.find(x - c) != m.end()){
-                   cnt += m[x-c] ;
+           if(m.find(x - i) != m.end()){
+                   cnt += m[x-i] ;
            }
           }
-          m[c]++;  
+          m[i]++;  
         }
         return (int)(cnt%1000000007);
     } 
