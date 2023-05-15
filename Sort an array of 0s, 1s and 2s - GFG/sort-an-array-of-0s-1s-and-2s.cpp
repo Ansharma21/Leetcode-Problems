@@ -5,9 +5,11 @@ using namespace std;
 
 
 // } Driver Code Ends
-class Solution{
+class Solution
+{
     public:
-    void sort012(int a[], int n){
+    void sort012(int a[], int n)
+    {
         int c0 = 0 ; int c1 = 0 ;
         for(int i = 0 ; i<n ; i++){
             if(a[i] == 0){
