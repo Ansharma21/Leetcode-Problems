@@ -9,23 +9,33 @@ class Solution {
         unordered_map<int , bool>vis;
         for(int i = 0 ; i<V ; i++){
             if(!vis[i]){
-                bool ans = iscycledfs(i , -1 , vis , adj);
+                bool ans = iscyclebfs(i , vis , adj);
                 if(ans)return true ;
             }
         }
         return false ;
     }
-    bool iscycledfs(int node , int parent , unordered_map<int , bool>&vis , vector<int> adj[]){
+    bool iscyclebfs(int node , unordered_map<int , bool>&vis , vector<int> adj[]){
+        unordered_map<int , int>parent;
+        parent[node] = -1;
         vis[node] = true ;
-        for(auto i : adj[node]){
-            if(!vis[i]){
-                bool detected = iscycledfs(i , node , vis , adj);
-                if(detected)return true ;
-            }
-            else if(vis[i] && i != parent){
-                return true ;
+        queue<int>q;
+        q.push(node);
+        while(!q.empty()){
+            int fr = q.front();
+            q.pop();
+            for(auto i : adj[fr]){
+                if(!vis[i]){
+                    q.push(i);
+                    parent[i] = fr ;
+                    vis[i] = true ;
+                }
+                else if(i != parent[fr]){
+                    return true ;
+                }
             }
         }
+        return false ;
     }
 };
 
